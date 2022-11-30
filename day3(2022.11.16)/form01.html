@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이디와 비밀번호</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+
+        body{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Nanum Pen Script', cursive;
+        }
+      fieldset {
+        width: 300px;
+      }
+      legend{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>아이디와 비밀번호</h2>
+
+    <!-- get방식과 post 방식(보완처리 방식선택) 
+id,name값은 자바스크립트로 폼을 제어할 때 사용
+action : 서버에 넘겨줄 파일명
+target : action속성에서 지정한 스크럽트 파일 창(_blank새창으로 열기)
+
+-->
+    <form action="/phone.php" method="post" name="user_form" id="user_form">
+      <!-- 태그 안에 폼 넣기 
+  label로 텍스트와(아이디,비밀번호)와 input을 연결해준다.
+  label for와 input의 id값을 같게 해준다.
+    -->
+      <label for="">아이디 <input type="text" /></label> <br />
+      <label for="">비밀번호 <input type="password" /></label> <br />
+
+      <!-- 태그와 폼요소 따로 쓰고 연결하기 
+
+    -->
+      <label for="">아이디</label>
+      <input
+        type="text"
+        id="user-id"
+        name="user-id"
+        placeholder="이름을 입력하세요."
+      /><br>
+      <label for="">비밀번호</label>
+      <input
+        type="password"
+        id="user-pw"
+        name="user-pw"
+        placeholder="비밀번호를 입력하세요."
+      >
+      <br>
+      <br>
+      <!-- 버튼의 이름은 value 값으로 바꾼다 -->
+      <!-- submit : 폼을 서버로 전송 -->
+      <!-- reset : 입력한 값을 초기화-->
+      <!-- button : 버튼 형태만 만들 뿐 자체 기능은 없다. -->
+
+      <button>
+        <img src="images/tick.png"    alt="">
+        일반버튼</button>
+      <input type="submit" value="Submit" class="submitBtnl" />
+      <input type="reset" value="Reset" class="resetBtnl" />
+
+      <h5><mark>다양한 용도에 맞게 입력 type값 넣기</mark></h5>
+      전화번호
+      <input
+        type="tel"
+        placeholder="02-0000-0000"
+        size="12"
+        maxlength="13"
+        autocomplete="off"
+      />
+
+      <!-- autocomplete : 자동완성  on/off 
+    maxlength : 입력할 수 있는 값의 길이
+    placeholder : 입력창에 나타나는 텍스트
+    size : 보이는 입력폼의 사이즈
+    -->
+      휴대폰번호
+      <input
+        type="phone"
+        placeholder="010-0000-0000"
+        size="13"
+        maxlength="13"
+        autocomplete="off"
+      />
+      <br />
+
+      <h5><mark>검색기능</mark></h5>
+      <input type="search" placeholder="검색" /><br />
+
+      <h5><mark>이메일</mark></h5>
+      <input type="email" placeholder="aaaaa@naver.com" />
+      <h5><mark>주소</mark></h5>
+      <input type="addr" placeholder="주소를 입력해주세요." />
+      <!-- radio 버튼은 하나만 선택 
+    하나만 선택하려면 name값을 갈게 해준다.
+라디오버튼, 체크박스 value : 선택한 체크박스나 라디오버튼을
+서버에게 알려줄 때 넘겨줄 값을 지정한다.
+이 값은 영문이나 숫자여야 하며  필수 속성이다.
+checked : 항목은 처음에 아무것도 선택되지 않는 상태로 화면에 표시되는데,
+여러 항목 중에 기본으로 선택해 놓고 싶은 항목 체크. 속성값이 없다.
+-->
+      <h5><mark>radio버튼 만들기</mark></h5>
+      <p>성별을 선택해주세요.</p>
+      <label for="male"
+        >남성<input type="radio" name="gender" id="male" checked value="s_1"
+      /></label>
+      <label for="female"
+        >여성<input type="radio" name="gender" id="female" value="s_2"
+      /></label>
+      <!-- checkbox 버튼은 여러개 선택 
+label의 for와 input의 id값을 맞춰주고 선택부분마다 다른 값을 준다.
+-->
+      <h5><mark>체크박스 만들기</mark></h5>
+      <p>이동 수단을 선택해주세요.</p>
+      <label for="vehicle1"
+        >자동차<input type="checkbox" name="" id="vehicle1" value="v_1"
+      /></label>
+      <label for="vehicle2"
+        >비행기<input type="checkbox" name="" id="vehicle2" value="v_2"
+      /></label>
+      <label for="vehicle3"
+        >기차<input type="checkbox" name="" id="vehicle3" value="v_3"
+      /></label>
+
+      <h5><mark>드롭다운 만들기</mark></h5>
+      가입경로
+      <select name="" id="path">
+        <option value="">블로그</option>
+        <option value="">검색</option>
+        <option value="">SNS</option>
+        <option value="">지인추천</option>
+        <option value="">기타</option>
+      </select>
+
+      <h5><mark>숫자입력하는 number 속성</mark></h5>
+      <label
+        ><input type="number" min="0" max="30" value="5" /> 최대 30까지
+        선택해주세요.</label
+      >
+
+      <h5><mark>슬라이드 막대 range속성</mark></h5>
+      <label
+        ><input type="range" min="0" max="50" value="25" /> 최대 50까지
+        선택해주세요.</label
+      >
+      <br />
+      <button onclick="window.open('form02.html')">공지 열기</button>
+
+      <!-- 새창으로 열릴 파일을 만들어 보세요 -->
+
+      <fieldset>
+        <legend>표나 폼의 제목을 나타낸다.</legend>
+      </fieldset>
+      <textarea name="" id="" cols="30" rows="10"> </textarea>
+
+      <h5><mark>컬러 선택</mark></h5>
+      <p>색상을 선택해 주세요.</p>
+      <input type="color" />
+      <h5><mark>날짜 선택</mark></h5>
+      <p>날짜를 선택해 주세요.</p>
+      <input type="date" /><br />
+      <p>날짜와 시간 선택</p>
+      <input type="datetime-local" />
+      <p>시간 선택</p>
+      <input type="time" />
+      <p>주 선택</p>
+      <input type="week" />
+
+      <h5><mark>파일 선택</mark></h5>
+      <input type="file" />
+
+      <!-- hidden : 폼 제출 시 사용자가 변경해서는 안 되는 데이터 함께 보낼 때 유용 -->
+      <h5><mark>숨겨진 입력필드 hidden</mark></h5>
+      <input type="hidden" />
+
+
+      <!-- value : 작업 진행 상태를 나타내며 부동 소수점으로 표현 
+    0보다 크기가 같고 max값보다 작거나 같아야 한다.
+    max값 지정되지 않았다면 1.0보다 작아야 한다.
+    max : 작업이 완료되려면 얼마나 많은 작업을 해야하는지 부동 소수점으로 표현한다. 이 값은 0보다 커야 한다.
+    -->
+      <!-- 전체 60초 중 50초 진행 -->
+      <progress value="50" max="60"></progress>
+
+      <h5><mark>이미지로 버튼을 대신</mark></h5>
+      <input type="image" src="images/submit_icon.png" alt="제출버튼">
+    </form>
+  </body>
+</html>
