@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container{
+ border: solid 1px lightgray;
+ height: 600px;
+}
+
+.prod-list img{
+    width: 300px;
+}
+
+.prod-list .caption{
+    position: absolute; /*🥎*/
+    top: 200px; /*기준보다 200px 아래로*/
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.486); /*블랙에서 투명도 주기*/
+    opacity: 0; /*🥽화면에 보이지 않게*/
+    transition: all 0.6s ease-in-out; /*부드럽게 나타나도록 트랜지션 추가*/
+    z-index: 10; /*다른 요소보다 위에*/
+}
+
+.prod-list li{
+    list-style: none;
+    float: left;
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    position: relative; /*🥎부모요소에 해줘야 position:absolute적용*/
+}
+
+.prod-list li:hover .caption{
+    opacity: 1; /*🥽*/
+    transform: translateY(-200px);
+}
+  
+.caption{
+    color: #fff;
+    text-align: center;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>신상품 목록</h1>
+        <ul class="prod-list">
+            <li>
+                <img src="images/강아지1.png" alt="사진1">
+                <div class="caption">
+                    <h2>상품 1</h2>
+                    <p>상품 1 설명 텍스트</p>
+                    <p>가격 : 12,456</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/강아지2.png" alt="사진1">
+                <div class="caption">
+                    <h2>상품 2</h2>
+                    <p>상품 2 설명 텍스트</p>
+                    <p>가격 : 12,456</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/cat.png" alt="사진1">
+                <div class="caption">
+                    <h2>상품 3</h2>
+                    <p>상품 3 설명 텍스트</p>
+                    <p>가격 : 12,456</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

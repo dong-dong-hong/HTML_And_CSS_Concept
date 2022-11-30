@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            width: 150px;
+            height: 180px;
+            border: 1px solid black;
+            margin: 30px;
+            float: left;
+            
+        }
+        img{
+            width: 200px;
+            height: 180px;
+        }
+        .rotatex:hover{
+            transform: rotateX(50deg);
+            /* x축으로 50도 회전 */
+        }
+        .rotatex:hover{
+            transform: rotateY(50deg);
+            /* Y축으로 50도 회전 */
+        }
+        #pers{
+            perspective: 300px;
+            /* 원근감 추가 */
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <img src="images/240_F_540701174_rax2mL4gfKpyen1CxtcCnRg6r4RADnqg.jpg" alt="">
+    </div>
+    <div class="origin"><!--부모요소에서 효과준다-->
+        <div class="rotatex">
+            <img src="images/240_F_540701174_rax2mL4gfKpyen1CxtcCnRg6r4RADnqg.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin"><!--부모요소에서 효과준다-->
+        <div class="rotatex">
+            <img src="images/240_F_540701174_rax2mL4gfKpyen1CxtcCnRg6r4RADnqg.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin" id="pers">
+        <div class="rotatex">
+            <img src="images/240_F_540701174_rax2mL4gfKpyen1CxtcCnRg6r4RADnqg.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

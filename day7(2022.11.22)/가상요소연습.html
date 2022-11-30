@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            margin: 15px;
+
+        }
+        .box::after{
+            content: "NEW!!";
+            font-size: 10px;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius: 2px;
+            background: red;
+            color: white;
+        }
+        .box2::before{
+            content: "주문특주!!";
+            background: purple;
+            border-radius: 2px;
+            font-size: 13px;
+            margin: 10px;
+            padding: 2px;
+        }
+        .box3::after{
+            content: "품절!!";
+            background: green;
+            color: white;
+            border-radius: 2px;
+            font-size: 15px;
+            margin: 10px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>제품 목록</h1>
+        <ul>
+            <li class="box2">제품 A</li>
+            <li>제품 B</li>
+            <li>제품 C</li>
+            <li class="box">제품 D</li>
+            <li>제품D</li>
+            <li>제품E</li>
+            <li class="box2">제품F</li>
+            <li>제품G</li>
+            <li class="box3">제품G</li>
+            <li class="box3">제품H</li>
+            
+        </ul>
+    </div>
+</body>
+</html>
+

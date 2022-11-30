@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        div p{
+            color: brown;
+            font-size: 16px;
+        }
+
+        /* 첫번째 글자 선택: first-letter  */
+        div h4::first-letter{
+            color: red;
+            background: yellow;
+            font-size: 30px;
+        }
+        /* 첫번째 줄 선택: first-line */
+        div::first-line{
+            color: gray;
+            background-color:  lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>웹 / 웹앱 / 앱 개발자</h4>
+        <p>웹디자이너</p>
+        <p>웹퍼블리셔</p>
+        <p>프론트엔드</p>
+        <p>백엔드</p>
+        <p>풀스택</p>
+    </div>
+</body>
+</html>

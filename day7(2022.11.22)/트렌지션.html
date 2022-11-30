@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black;
+            transition-property: width, height ; /* 트랜지션 대상 - 가로, 세로 */
+            transition-duration: 2s;/* 실행할 시간 */
+            transition-delay: 3s;  /* 지연 시간 */
+            transition-timing-function: ease-in;
+            /* ease: 처음에는 천천히 시작하고 점점 빨라지다가 마지막에 천천히 끝냄 (기본값)
+            linear : 시작부터 끝까지 똑같은 속도로 진행
+            ease-in : 느리게 시작
+            ease-out : 느리게 끝
+            ease-in-out : 느리게 시작하고 느리게 끝
+            cubic-bezier(n,n,n,n): 배지 함수 정의 n값을 0~1사이만 사용
+            
+            transition: 속성, 실행시간,실형형태, 지연시간을 한꺼번에 쓸 수 있다.; */
+          
+        }
+        .box:hover{
+            width: 200px;
+            height: 170px;
+        }
+        .box2{
+            margin-top: 50px;
+            width: 150px;
+            height: 150px;
+            background-color: orangered;
+            border: 1px solid black;
+            transition: 2s ease-in;
+        }
+        .box2:hover{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            transform: rotate(270deg);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <div class="box2">box2</div>
+  </body>
+</html>

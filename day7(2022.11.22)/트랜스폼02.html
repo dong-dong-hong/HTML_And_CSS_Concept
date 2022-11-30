@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼:translate</title>
+    <style>
+        .container{
+            border: 1px solid gray;
+            width: 800px;
+            height: 250px;
+            margin: 20px auto;
+        }
+        .box{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+        .box > div {
+            width: 150px;
+            height: 150px ;
+            background-color: green;
+        }
+        /* x(가로)축으로 2배 확대 */
+        .movex:hover{
+            transform: scaleX(2);
+
+        }
+        /* Y(세로)축으로 1.5배 확대 */
+        .movey:hover{
+            transform: scaleY(1.5);
+        }
+        /* X,Y(가로, 세로) 0.7배 확대 */
+        .movexy:hover{
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="movex"></div>
+        </div>
+        <div class="box">
+            <div class="movey"></div>
+        </div>
+        <div class="box">
+            <div class="movexy"></div>
+        </div>
+    </div>
+</body>
+</html>

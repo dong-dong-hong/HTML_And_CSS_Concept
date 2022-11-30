@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* list-style: 리스트스타일을 선택 */
+        ul{
+            list-style: circle;
+        }
+        ul li{
+            line-height: 30px;
+            margin-bottom: 2px;
+        }
+        /* (2n+3)3번째부터 2의 배수 모두 선택 
+        (2n+2) 2번째로부터 2의 배수 모두 선택
+        */
+        ul li:nth-child(2n+3){
+            color: yellowgreen;
+        }
+        /*(2n)2의 배수 (3n)3의 배수 */
+        /* ul li:nth-child(3n) {
+            color: yellowgreen;
+        } */
+
+        /* 3번째 요소부터 전체 선택 */
+        /* ul li:nth-child(n+3) {
+            color: yellowgreen;
+
+        } */
+
+
+        /* 짝수 요소 선택 */
+        /* ul li:nth-child(even) {
+            color: blue;
+            background-color: lightgray;  }*/
+       
+        /* 홀수 요소 선택 */
+        /* ul li:nth-child(odd) {
+            color: blue;
+            background-color: lightgray;
+        } */
+
+
+        /* 첫번째 자식요소 선택 */
+        /* ul li:nth-child(1) {
+            color: red;
+            background-color: lightgray;
+        } */
+        /* 네번째 자식요소 선택 */
+        /* ul lu:nth-child(4) {
+            color: red;
+            background-color: lightgray;
+        } 
+        */
+    </style>
+</head>
+<body>
+    <h3>파스타 면의 종류</h3>
+    <ul>
+        <li>스타게티(spaghetti) ...</li>
+        <li>링귀네(Linguine) ...</li>
+        <li>부카티니(Bucatini) ...</li>
+        <li>탈리아텔레(Tagliatelle) ...</li>
+        <li>페투치네(Fettuccine) ...</li>
+        <li>라자냐(Lasagna) ...</li>
+        <li>핀네(penne) ...</li>
+        <li>푸실리(Fusilli) ...</li>
+    </ul>
+</body>
+</html>
