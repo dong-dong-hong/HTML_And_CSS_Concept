@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 웹폰트 적용하기 -->
+        @import url('https://fonts.googleapis.com/css2? family= Noto+Sans+KR & display=swap');
+        span{
+            color: blue;
+        }
+         h3{/* 폰트 바꿈  */
+            font-family: 'Noto Sans KR';
+        }
+    </style>
+</head>
+<body>
+    <h1>야외 텐트를 닮은 건축물 <mark> "테쉬폰"</mark> </h1>
+
+    <p>아일랜드 출신 임파제 신부가 1954년 제주에 오면서 목장 숙소를 짓기 시작한 후 사료공장, 성당으로 활용됐었습니다. 
+        제주에서 점차 다른 지방으로 보급됐지만 현재 제주에만 건축물이 남아있으며, <span>국내 근현대 건축사의 한 페이지를 보여주는 가치</span>
+        를 지닌다고 전문가들은 평가합니다.
+</p>
+        <h3><mark>루비 사용하기</mark></h3>
+       <p>스크립트 언어의 일종. 2021년 12월 기준 최신 안정화 버전은 3.1.0이다[1]. 
+            창시자는 마츠모토 유키히로(Matz)로 1995년에 발표되었다. 동서양 모두 마츠라는 애칭으로 부른다. 
+            트위터 bio를 Ruby(<ruby> <rt>のパパ</rt></ruby>) (Ruby의 아빠)라고 쓸 정도로 Ruby에 대한 애정이 강하다. 
+            그 때문인지 Ruby 유저들 역시 숫자는 적지만 언어에 대한 애착이 강한 편이다.</p> 
+    
+   
+
+    <h3> <mark> 인용 내용 표시하기 "웹 접근성"</mark></h3>
+    <p>The power of the Web is in its universality.
+        Access by everyone regardless of disability is an essential aspect.
+        <q cite="https://www.w3.org/standards/webdesign/accessibility">
+            Tim Berners-Lee, W3C Director and inventor of the World Wide Web
+        </q>
+    </p>
+
+    <h3> <mark>로컬 스토리지(Local Storage)를 저장하는 함수</mark></h3>
+<pre> <!--입력하는 그대로 화면에 표시하기-->
+    function savetheLocal(){
+        var second = document.getElementById("second");
+        var thevalue = second.value;
+        localStorage.setItem(1, thevalue);
+        gettheLocal();
+   }
+
+</pre>
+
+<hr>
+<h3> <mark>인용문 넣기</mark>  </h3>
+<blockquote>
+    The power of the Web is in its universality.
+        Access by everyone regardless of disability is an essential aspect.
+</blockquote>
+
+<h3><mark>키보드 입력이나 음성 명령 사용자 입력 내용</mark> </h3>
+<p> 웹 화면을 다시 불러오려면 <kbd>F5</kbd>키를 누릅니다.
+
+</p>
+ 
+<h3><mark>부가 정보처럼 작게 표시해도 되는 텍스트</mark></h3> 
+<p>가격 : 13000원 <small>(부가세 별도)</small></p>
+
+<h3> <mark>위 첨자, 아래 첨자</mark> </h3>
+<p>E=mc<sup>2</sup></p>
+<p>물의 화학식은 <b>H<sub>2</sub>O</b>다</p>
+
+<h3><mark>취소선과 밑줄</mark> </h3>
+<p><s>34,000원</s> <strong>19,000원</strong></p>
+<p>링크 표시 용도가 아니라 단순히 <u>밑줄을 긋는다면</u></p>
+
+<h3><mark>컴퓨터 인식을 위한 소스 코드</mark></h3>
+<pre><code>function savetheLocal(){....}</code></pre>
+
+<h3><mark>abbr 약자표시, title 속성을 함께 사용할 수 있음</mark></h3>
+<p><b><abbr title="Internet Of Things">IOT</abbr></b>
+각종 사물에 센서와 통신 지능을 내장해 인터넷에 연결하는 기술을 의미한다.</p>
+</body>
+</html>
