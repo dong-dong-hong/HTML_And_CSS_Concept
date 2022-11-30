@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 150px;
+        height: 120px;
+        margin: 15px;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 20px;
+        box-sizing: border-box; /* 테두리까지 포함해서 너비값을 지정 */
+        /* box-sizing: content-box; 기본값 */
+        display: inline-block; /* 인라인과 블록요소 같이 사용 */
+        border-width: 6px; /* 테두리 굵기 */
+      
+      }
+      .box1 {
+        border-style: solid;
+       
+        /* 실선 */
+      }
+      .box2 {
+        border-style: dotted;
+      
+        /* 점선 */
+      }
+      .box3 {
+        border-style: dashed;
+
+        /* 굵고 긴 점선 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>

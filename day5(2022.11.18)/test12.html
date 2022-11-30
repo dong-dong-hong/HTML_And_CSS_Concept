@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 포지션 속성</title>
+    <style>
+            div{
+                border: 1px solid brown;
+                background-color: rgb(255, 253, 240);
+                margin: 10px;
+            }
+            .static{
+                width: 500px;
+                height: 200px;
+                position: static;
+                letter-spacing: 2px;
+                line-height: 0.9;
+            }
+            .relative-1{
+                width: 400px;
+                height: 300px;
+                position: relative;
+            }
+            .relative-2{
+                width: 400px;
+                width: 200ox;
+                position: relative;
+                left: 300px;
+                top: -100px;
+            }
+            .fixed{
+                width: 250px;
+                height: 250px;
+            background-color: rgb(33, 136, 131);
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            }
+            strong{
+                font-size: 24px;
+            }
+            p{
+                background-color: rgb(160, 86, 86);
+            }
+    </style>
+</head>
+<body>
+        <div class="static">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae officiis dolorem id totam labore amet, corporis distinctio quam voluptate. Ut ea corporis nesciunt nostrum atque, architecto maiores. Aliquam, harum a./div>
+        <div class="relative-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil temporibus atque voluptatem ab, consequuntur recusandae id sed. Explicabo quidem tempora aperiam ipsa pariatur quam ipsum nam, nobis facilis, eius minima!</div>
+        <div class="relative-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, impedit assumenda voluptate inventore voluptates repudiandae. Provident repudiandae eligendi officiis blanditiis, repellat labore et aut dolor nemo cum, neque vero qui.</div>
+        <div class="fixed"><strong>공지사항</strong><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ipsum iusto, a, laudantium, sapiente officiis reprehenderit doloremque sed tenetur natus praesentium corporis debitis consequatur rerum inventore. Minus possimus alias recusandae.</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti officia blanditiis, deleniti reprehenderit quasi obcaecati rerum a minima explicabo sed facere atque repudiandae autem voluptas molestiae minus eligendi magni deserunt!</p>
+</body>
+</html>
