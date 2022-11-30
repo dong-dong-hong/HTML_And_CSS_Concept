@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <style>
+    a:link{
+        /* 방문하지 않은 링크 선택 */
+        color: gray;
+        text-decoration: none;
+    }
+    a:visited{
+        /* 방문한 링크(한번이상클릭) */
+        color: rgb(11, 243, 243);
+    }
+    a:hover{
+        /* 마우스 오버 시 */
+        text-decoration: underline;
+    }
+    a:focus{
+        /* 포커스를 받았을 때(탭 키 눌러서 선택) */
+        text-decoration: underline;
+        color: pink;
+        /* outline: 0; */
+    }
+    a:active{
+        /* 활성 링크 선택(클릭해서 이동하는 순간) */
+        background: #c00;
+        text-decoration: none;
+    }
+   </style>
+  </head>
+  <body>
+    <div>
+      <p><a href="#">웹 기획</a></p>
+      <p><a href="#">웹 스토리보드</a></p>
+      <p><a href="#">웹 디자인</a></p>
+      <p><a href="#">웹 포트톨리오</a></p>
+      <p><a href="#">웹 구조</a></p>
+    </div>
+  </body>
+</html>

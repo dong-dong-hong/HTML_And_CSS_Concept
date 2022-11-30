@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 스타일 지정</title>
+    <style>
+        form {
+            text-align: center;
+        }
+        fieldset{
+            margin: 20px auto;
+            padding: 20px 40px 20px 40px;
+            border: 1px solid lightseagreen;
+        }
+        legend{
+            font-size: 22px;
+            color: gray;
+            text-align: left;
+            padding-right: 10px;
+            letter-spacing: 1px;
+        }
+        input:nth-of-type(4) {
+            /* input에서 4번째 자식요소 선택 */
+            margin-left: 20px;
+        }
+        input:default+label{
+            /* input요소 체크박스나 라디오버튼 🤣기본 입력 요소 label선택 */
+            color: red;
+        }
+        input:checked+label{
+            /* input요소 체크박스나 라디오버튼 🤣체크된 입력 요소 label선택 */
+            color: blue;
+        }
+        #input3 input:enabled+label{
+            /* input요소 체크박스나 라디오버튼 🤣활성화된 요소의 label선택 */
+            color: green;
+        }
+        #input3 input:disabled+label{
+            /* input요소 체크박스나 라디오버튼 🤣비활성화된 요소의 label선택 */
+            color: violet;
+        }
+    </style>
+  </head>
+  <body>
+    <form name="form1" id="form1" method="post" action="abc1.php">
+      <fieldset id="input1">
+        <legend>[예제1] Default</legend>
+        <label for=""><input type="checkbox" />아이디저장</label>
+        <label for=""><input type="checkbox" />자동로그인</label>
+        <label for=""><input type="checkbox" />보안접속</label>
+        <label for=""><input type="radio" />여행</label>
+        <label for=""><input type="radio" />운동</label>
+      </fieldset>
+      <br />
+
+      <fieldset id="input2">
+        <legend>[예제2] Default & CHECKED</legend>
+        <label for=""><input type="checkbox" checked />아이디저장</label>
+        <label for=""><input type="checkbox" >자동로그인</label>
+        <label for=""><input type="checkbox" >보안접속</label>
+        <label for=""><input type="radio" name="chek" >여행</label>
+        <label for=""><input type="radio" name= "chek" checked />운동</label>
+      </fieldset>
+      <br />
+
+      <fieldset id="input3">
+        <legend>[예제3] ENABLED DISABLED</legend>
+        <label for=""><input type="checkbox" enabled />아이디저장</label>
+        <label for=""><input type="checkbox" disabled/>자동로그인</label>
+        <label for=""><input type="checkbox"  disabled/>보안접속</label>
+        <label for=""><input type="radio"  enabled/>여행</label>
+        <label for=""><input type="radio" enabled />운동</label>
+      </fieldset>
+    </form>
+  </body>
+</html>

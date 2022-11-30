@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+      fieldset {
+        border: 1px solid lightgray;
+        margin-bottom: 30px;
+       
+      
+      }
+      legend {
+        font-size: 17px;
+        font-weight: bold;
+      }
+      ul,
+      li {
+        list-style: none;
+        line-height: 30px;
+        margin: 2px;
+        
+      }
+      label {
+        text-align: left;
+        width: 110px;
+        float: left;
+      }
+      input {
+        border-radius: 5px;
+      }
+      button {
+        border-radius: 25px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        padding: 7px 25px;
+      }
+      #signup input[required] {
+        border: 1px solid red;
+      }
+
+      #signup input[readonly] {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="signup">
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+            <label for="userId">아이디</label>
+            <input type="text" name="userId" id="userId" required autofocus />
+          </li>
+          <li>
+            <label for="pwd1">비밀번호</label>
+            <input type="password" name="password" id="pwd1" required />
+          </li>
+          <li>
+            <label for="pwd2">비밀번호확인</label>
+            <input type="password" name="password" id="pwd2" required />
+          </li>
+          <li>
+            <label for="level">회원등급</label>
+            <input
+              type="text"
+              name="level"
+              id="level"
+              readonly
+              value="준회원"
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="fullName">이름</label>
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              placeholder="5자미만 공백없이"
+              required
+            />
+          </li>
+          <li>
+            <label for="email">메일 주소</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="abcd@domain.com"
+              required
+              autocomplete="off"
+            />
+          </li>
+          <li>
+            <label for="tel">연락처</label>
+            <input type="tel" name="tel" id="tel" autocomplete="off" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <div class="subMit">
+          <button type="submit">제출</button>
+        </div>
+        
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            text-align: center;
+        }
+        fieldset{
+            margin: 20px auto;
+            padding: 20px 40px 20px 40px;
+            border: 1px solid rgb(9, 67, 64);
+        }
+        legend{
+            font-size: 22px;
+            color: gray;
+            text-align: left;
+            padding-right: 10px;
+            letter-spacing: 1px;
+        }
+        input:nth-of-type(4){ /*input에서 4번째 자식요소 선택*/
+            margin-left: 20px;
+        }
+        input:default+label{ /*input요소 체크박스나 라디오버튼 🔴기본 입력 요소 label선택*/
+            color:red;
+        }
+        input:checked+label{ /*input요소 체크박스나 라디오버튼 🔴체크된 요소의 label선택*/
+            color: blue;
+        }
+        #input3 input:enabled+label{ /*input요소 체크박스나 라디오버튼 🔴활성화된 요소의 label선택*/
+            color: green;
+        }
+        #input3 input:disabled+label{ /*input요소 체크박스나 라디오버튼 🔴비 활성화된 요소의 label선택*/
+            color: purple;
+        }
+
+        😍😍
+        #signup input[required]  {/* 필수입력 요소에 적용 */
+            border: 1px red solid ;
+        }  
+        #signup input[readonly] {
+            border: none; /* 읽기전용 필드에는 테두리 없애기 */
+        }
+    
+
+
+    </style>
+</head>
+<body>
+    <form name='form1' id="form1" method="post" action="abc1.php">
+
+        <fieldset id="input1"> 
+            <legend> [예제1] DEFAULT </legend> 
+        
+            <input type='checkbox' name='idSave' id='idSaveChk1'  value='아이디저장'>
+            <label for='idSaveChk1'>아이디저장</label> 
+        
+            <input type='checkbox' name='autoSave' id='autoSaveChk1' value='자동로그인'>
+            <label for='autoSaveChk1'>자동로그인</label>
+            
+            <input type='checkbox' name='secConnect' id='secConnectChk1' value='보안접속'>
+            <label for='secConnectChk1'>보안접속</label>
+            
+            <input type='radio' name='chek' id='travelChk1'  value='여행'>
+            <label for='travelChk1'>여행</label>   
+        
+            <input type='radio' name='chek'  id='exerciseChk1'  value='운동'>
+            <label for='exerciseChk1'>운동</label> 
+        </fieldset>  
+        <br>
+        
+        <fieldset id="input2"> 
+            
+            <legend> [예제2] DEFAULT & CHECKED </legend>
+        
+            <input type='checkbox' name='idSave' id='idSaveChk2' checked  value='아이디저장'>
+            <label for='idSaveChk2'>아이디저장</label> 
+        
+            <input type='checkbox' name='autoSave' id='autoSaveChk2' value='자동로그인'>
+            <label for='autoSaveChk2'>자동로그인</label>
+            
+            <input type='checkbox' name='secConnect' id='secConnectChk2' value='보안접속'>
+            <label for='secConnectChk2'>보안접속</label>
+        
+            <input type='radio' name='chek' id='travelChk2'  value='여행'>
+            <label for='travelChk2'>여행</label>   
+        
+            <input type='radio' name='chek'  id='exerciseChk2' checked value='운동'>
+            <label for='exerciseChk2'>운동</label> 
+        </fieldset>  
+        <br>
+        
+        <fieldset id="input3">
+            <legend> [예제3] ENABLED DISABLED </legend>
+        
+            <input type='checkbox' name='idSave' id='idSaveChk3' enabled  value='아이디저장'>
+            <label for='idSaveChk3'>아이디저장</label> 
+        
+            <input type='checkbox' name='autoSave' id='autoSaveChk3' disabled value='자동로그인'>
+            <label for='autoSaveChk3'>자동로그인</label>
+        
+            <input type='checkbox' name='secConnect' id='secConnectChk3' disabled  value='보안접속'>
+            <label for='secConnectChk3'>보안접속</label>
+        
+            <input type='radio' name='chek' id='travelChk3' enabled value='여행'>
+            <label for='travelChk3'>여행</label>   
+        
+            <input type='radio' name='chek'  id='exerciseChk3' enabled value='운동'>
+            <label for='exerciseChk3'>운동</label>  
+        </fieldset>  
+        </form>
+</body>
+</html>
