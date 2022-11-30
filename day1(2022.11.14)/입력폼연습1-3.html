@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 정보 입력</title>
+</head>
+<style>
+    fieldset{
+        width: 350px;
+        border-color: brown;
+    }
+    
+</style>
+<body>
+    <h2>회원 정보 입력</h2>
+    <fieldset>
+        <legend>로그인 정보</legend>
+    <form action="register.php" method="post" id="id_form">
+        <label for="user-id">아이디 <input type="text" placeholder="name" id="user-id" autofocus></label><br>
+        <!--오토포커스는 새로고침했을때 커서가 올라가있는 상태를 만들어주는 위치-->
+        <label for="user-pw">비밀번호 <input type="text" placeholder="password" min="0" max="16" size="9"></label>
+    <button>로그인</button>
+</form>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>
+        메일 주소 : <input type="email" size="25" placeholder="abc@naver.com"><br><br>
+        메일 수신
+        <input type="radio" name="agree" checked>메일 수신 동의
+        <input type="radio" name="agree"> 메일 수신 거부<br><br>
+        연락처 : <input type="tel" placeholder=" - (하이픈)을 빼고 입력해주세요" size="23">
+        <br>
+        생년월일 : <input type="date" value="1995-01-01">
+        <br>
+        취미 : <input type="checkbox">독서 <input type="checkbox">음악감상 <input type="checkbox">운동
+        <br><br>
+        가입 경로 <select name="" id="">
+            <option value="">블로그</option>
+            <option value="">검색</option>
+            <option value="">SNS</option>
+            <option value="">기타</option>
+        </select>
+        <br><br>
+        <textarea name="" id="" cols="46" rows="10" placeholder="자유롭게 적어주세요"></textarea>
+    </fieldset>
+</body>
+</html>
