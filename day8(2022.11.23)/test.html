@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        /* height: 100vh; */  
+        display: flex;/* 부모요소에서 입력한다 */
+      /* 플랙스를 이용 : 블록요소를 인라인 요소로 변경 */
+        /* justify-content: space-around; 
+            flex-end : 전체가 오른쪽 창 끝으로 
+            flex-between: 적딩한 공백있으면서 정렬
+            */
+        /*  flex-direction: column;새로 정렬 */
+       /*  align-items: flex-end; 교차축 */
+       justify-content: center;/* 높이값 있는 상태에서 */
+       width: 100%;
+       border: 7px solid brown;
+       flex-wrap: wrap;  /* 창을 줄여보기 */
+        /* flex-direction : row; : 기본값 */
+       /* order : 1 내용을 변경하지 않고 출력 순서만 바꿀 때 사용 */
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+      }
+      .box1 {
+        background-color: pink;
+      }
+      .box2 {
+        background-color: red;
+      }
+      .box3 {
+        background-color: blue;
+      }
+      .box4 {
+        background-color: violet;
+      }
+      .box5 {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+      <div class="box5">box5</div>
+    </section>
+  </body>
+</html>
