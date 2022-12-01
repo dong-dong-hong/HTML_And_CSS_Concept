@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>placeholder 입력 상자 속성</title>
+    <style>
+        input[type="text"] {
+            width: 60%;
+            height: 20px;
+            border: 1px solid gray;
+            background-color: lightgray;
+            padding: 10px;
+            color: black;
+            font-size: 17px;
+        }
+        input[type="text"]::placeholder{
+            /* 반드시 ::콜론2개 사용 */
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <label for="fid">*아이디(ID)</label>
+    <input type="text" name="fid" id="fid" placeholder="ID는 2자 ~ 10자 이내!">
+</body>
+</html>

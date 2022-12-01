@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        width: 100px;
+        height: 70px;
+      }
+      .container {
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      h1 {
+        font-size: 50px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      h1:hover {
+        color: orangered;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      ul li {
+        list-style: none;
+        float: left;
+        margin: 15px;
+        text-align: center;
+        font-size: 15px;
+      }
+      .img1 {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+      }
+      .box1 {
+        display: flex;
+        margin: 10px;
+      }
+
+      .home1:hover {
+        color: orangered;
+      }
+
+      li {
+        color: white;
+      }
+
+      .box3 {
+        display: flex;
+        justify-content: space-around;
+      }
+      p {
+        width: 120px;
+        height: 30px;
+        text-align: center;
+        background-color: orangered;
+        border: 1px solid black;
+        border-radius: 15px;
+        position: relative;
+        top: 5px;
+      }
+      #home2 {
+        display: none;
+        background-color: rgb(37, 9, 161);
+      }
+
+      .home1:hover #home2 {
+        display: flex;
+        border: 1px solid greenyellow;
+        position: fixed;
+      }
+      @media screen and (max-width: 768px) {
+        .container {
+          height: 250px;
+          align-items: flex-start;
+        }
+        ul {
+          flex-direction: column;
+        }
+        .box2 {
+          height: 200px;
+          flex-direction: column;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <img src="images/pngtree-fish-icon-png-image_1502306.jpg" alt="" />
+        <h1>sTESTs</h1>
+      </div>
+
+      <div class="box2">
+        <ul>
+          <div>
+            <li class="home1">
+              Home
+              <ul id="home2">
+                <li>내 정보</li>
+                <li>마이페이지</li>
+                <li>고객사항</li>
+                <li>자격증정보</li>
+              </ul>
+            </li>
+          </div>
+
+          <div>
+            <li class="home1">
+              Service
+              <ul id="home2">
+                <li>서비스</li>
+                <li>서비스</li>
+                <li>서비스</li>
+              </ul>
+            </li>
+          </div>
+
+          <div>
+            <li class="home1">
+              Pages
+              <ul id="home2">
+                <li>페이지</li>
+                <li>페이지</li>
+                <li>페이지</li>
+              </ul>
+            </li>
+          </div>
+
+          <li class="home1">
+            Blog
+            <ul id="home2">
+              <li>블로그</li>
+              <li>블로그</li>
+              <li>블로그</li>
+            </ul>
+          </li>
+          <li class="home1">
+            Contact
+            <ul id="home2">
+              <li>연락</li>
+              <li>연락</li>
+              <li>연락</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box3">
+        <img
+          class="img1"
+          src="images/png-transparent-computer-icons-search-box-others-miscellaneous-magnifier-black-and-white-thumbnail.png"
+          alt=""
+        />
+        <img
+          class="img1"
+          src="images/png-transparent-computer-icons-search-box-others-miscellaneous-magnifier-black-and-white-thumbnail.png"
+          alt=""
+        />
+        <p>Appointment</p>
+      </div>
+    </div>
+  </body>
+</html>

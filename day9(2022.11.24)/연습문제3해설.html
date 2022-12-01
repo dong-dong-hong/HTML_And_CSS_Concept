@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+     
+      .navigator{
+        background-color: rgba(0, 0, 0, 0.747);
+        display: flex;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 120px;
+      }
+      h1{
+        cursor: pointer;
+        font-size: 40px;
+        color: aliceblue;
+      }
+      h1:hover{
+        color: orangered;
+      }
+      ul{
+        list-style: none;
+        display: flex;
+      }
+      li{
+        padding: 0px 10px;
+      }
+      a{
+        text-decoration: none;
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      a:hover{
+        color: orangered;
+      }
+      .icons{
+        color: aliceblue;
+      }
+      .appo{
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background-color: rgba(204, 78, 32, 0.842);
+        border-radius: 50px;
+        padding: 5px 15px;
+        margin: 0px 5px;
+      }
+      @media screen and (max-width:768px) {
+        .navigator {
+          height: 180px;
+          align-items: flex-start;
+          padding-top: 15px;
+        }
+        .navbar ul{
+          flex-direction: column;
+        }
+        .navbar ul li{
+          margin: 5px 0px;
+        }
+        .icons{
+          margin-top: 10px;
+        }
+        .appo{
+          display: none;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <!--cdn-->
+  </head>
+  <body>
+    <nav class="navigator"> 
+      <div class="logo">
+        <h1>&nbsp; <i class="fas fa-fish"></i> logo &nbsp;</h1>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="icons">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i> </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-sharp fa-solid fa-bars"></i></a>
+          </li>
+          <li class="appo">
+            Appointment
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

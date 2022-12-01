@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap {
+        text-align: center;
+      }
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 50px auto;
+        text-align: center;
+        line-height: 200px;
+        background: hotpink;
+        color: #fff;
+        font-size: 30px;
+        animation: anima 3s infinite normal ease-in-out; /* 애니메이션 이름, 시간 */
+        /* 애니메이션 이름, 시간 */
+        /* 한 줄로 속성값 입력이 권장사항 */
+
+        /* infinite : 무한반복 */
+        /*  */
+
+        @keyframes anima {
+          0% {
+            left: 0;
+            top: 0;
+          }
+          25% {
+            left: 400px;
+            top: 0;
+          }
+          50% {
+            left: 400px;
+            top: 400px;
+          }
+          75% {
+            left: 0;
+            top: 400px;
+          }
+          100% {
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+      @keyframes anima {
+        from {
+          transform: translate(0, 0); /* 시작 */
+        }
+        to {
+          transform: translate(400px, 300px); /* 끝 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="box">animation</div>
+    </div>
+  </body>
+</html>

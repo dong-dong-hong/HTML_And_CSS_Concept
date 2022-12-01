@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    body{
+        background-color: orange;
+        /* 기본(pc모니터일 때) */
+    }
+    @media screen and  (max-width: 768px){
+        /* 768이하일 때 아래내용 적용 */
+        body{
+            background-color: lightblue;
+        }
+
+        /*
+        display : block; 화면에 보이게
+        display : none; 화면에 보이지 않게 
+         */
+    }
+
+    @media screen and(max-width:320px){
+        /* 320이하일 때 아래내용 적용 */
+        body{
+            background-color: gray;
+        }
+    }
+ </style>
+</head>
+<body>
+
+</body>
+</html>
