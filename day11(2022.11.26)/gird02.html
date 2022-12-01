@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap:1em;
+            grid-template-areas: 
+            'box1 box1 box2'
+            'box3 box4 box2'
+            'box3 box4 box2'
+            'box5 box4 box6'
+            'box5 box7 box7';    
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image1{
+            grid-area: box1;
+        }
+        .image2{
+            grid-area: box2;
+        }
+        .image3{
+            grid-area: box3;
+        }
+        .image4{
+            grid-area: box4;
+        }
+        .image5{
+            grid-area: box5;
+        }
+        .image6{
+            grid-area: box6;
+        }
+        .image7{
+            grid-area: box7;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="../images/ceramic01.jpg" class="image1">
+        <img src="../images/ceramic02.jpg" class="image2">
+        <img src="../images/ceramic03.jpg" class="image3">
+        <img src="../images/ceramic04.jpg" class="image4">
+        <img src="../images/ceramic05.jpg" class="image5">
+        <img src="../images/car1.jpg" class="image6">
+        <img src="../images/sun.jpg" class="image7">
+    </div>
+</body>
+</html>

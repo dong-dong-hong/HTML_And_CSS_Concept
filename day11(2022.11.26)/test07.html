@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 700px;
+            border: 1px solid red;
+            /*그리드 컨테이너 지정*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-columns: 200px 200px 200px; */
+            /*grid-template-columns: repeat(3, 1fr); 로 쓸 수 있다. */
+            /*grid-template-rows: 100px; /*한줄이 차지하는 값*/
+            grid-template-rows: 100px; /*한줄이 차지하는 값*/
+            grid-template-rows: minmax(100px, auto); /*줄 높이는 최소 100px*/
+
+        }
+        .items1, .items3, .items5{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="items1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit
+
+        </div>
+        <div class="items2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit</div>
+        <div class="items3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit</div>
+        <div class="items4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit</div>
+        <div class="items5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, reprehenderit</div>
+    </div>
+</body>
+</html>
