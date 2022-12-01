@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            /*
+            grid-template-areas:
+            이부분이 추가됨
+            box1 box1 box1
+            box2 box3 box3
+            box2 . box4
+             */
+        }
+        .box1{
+            background-color: lightblue;
+            grid-column: 1/4;
+            /* grid-area : box1 */
+        }
+        .box2{
+            background-color: rgb(27, 175, 151);
+            grid-row: 2/4;
+        }
+        .box3{
+            background-color: rgb(128, 231, 87);
+            grid-column: 2/4;
+        }
+        .box4{
+            background-color: rgb(114, 21, 86);
+            grid-row-start: 3;
+            grid-column-start: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+ </div>
+</body>
+</html>

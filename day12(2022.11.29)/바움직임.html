@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            position: relative;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            padding-top: 140px;
+            z-index: 1;/* 값이 클수록 위로 올라온다. */
+        }
+        p{
+            font-size: 14px;
+            line-height: 1.4;
+            color: rgb(50, 177, 219);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        article{
+            border: 1px solid red;
+            padding: 70px 40px 100px 40px;  /* 위 시계방향 적용 */
+            transition: flex 1s, opacity 1s;
+            z-index: 1;
+            cursor: pointer;
+        }
+        .inner{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        section article:hover{
+            opacity: 1;
+        }
+        section article .inner .txt h2::after{
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+        }
+        section article:hover .inner .txt h2::after{
+            width: 80px;
+            background-color: orange;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <div class="inner">
+                <div class="txt">
+                    <h2>01</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolores voluptatum eius nesciunt sed maxime pariatur provident fugiat, deleniti molestiae ratione itaque, labore laborum omnis? Nulla eveniet odit beatae perferendis!
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+                <div class="txt">
+                    <h2>02</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolores voluptatum eius nesciunt sed maxime pariatur provident fugiat, deleniti molestiae ratione itaque, labore laborum omnis? Nulla eveniet odit beatae perferendis!
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+                <div class="txt">
+                    <h2>03</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolores voluptatum eius nesciunt sed maxime pariatur provident fugiat, deleniti molestiae ratione itaque, labore laborum omnis? Nulla eveniet odit beatae perferendis!
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="inner">
+                <div class="txt">
+                    <h2>04</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolores voluptatum eius nesciunt sed maxime pariatur provident fugiat, deleniti molestiae ratione itaque, labore laborum omnis? Nulla eveniet odit beatae perferendis!
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3312866.4332525562!2d127.8733!3d35.81905!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x660743aa0774103d!2z7JeQ7J207L2Y7JWE7Lm0642w66-4IO2ZjeuMgO2VmeybkA!5e0!3m2!1sko!2skr!4v1669699915260!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

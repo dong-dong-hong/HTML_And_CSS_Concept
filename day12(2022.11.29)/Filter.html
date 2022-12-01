@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 650px;
+            margin: 100px auto;
+            border: 1px solid lightgray;
+            padding: 10px;
+        }
+        div img{
+            width: 200px;
+            margin: 6px;
+        }
+        /* 수치값이 커질수록 blue 효과 증가 */
+        div img:nth-of-type(2) {
+            filter: blur(3px);
+        }
+        /* 1보다 작아지면 어두워지고 커지면 밝아진다 */
+        div img:nth-of-type(3) {
+            filter: brightness(0.5);
+        }
+        /* 100%작아지면 대비효과가 낮아지고 높아지면 대비 증가 */
+        div img:nth-of-type(4) {
+            filter: contrast(150%);
+        }
+        /* 100%에 근접할수록 흑백으로 전환된다. */
+        div img:nth-of-type(5) {
+            filter: grayscale(100%);
+        }
+        /* 0~360deg까지 뱐경가능 색상 변경 효과 */
+        div img:nth-of-type(6) {
+            filter: hue-rotate(180deg);
+        }
+        /* 100%로 근접할수록 색감이 정 반대로 전환 */
+        div img:nth-of-type(7) {
+            filter: invert();
+        }
+        /* 0으로 근접할수록 색감의 채도가 낮아짐 */
+        div img:nth-of-type(8) {
+            filter: saturate(0.5);
+        }
+        /* 100%로 근접할수록 갈색톤으로 색감 변경 */
+        div img:nth-of-type(9) {
+            filter: sepia(100%);
+        }
+    </style>
+</head>
+<body>
+        <div>
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+            <img src="../images/어두운 이미지.jpg" alt="">
+        </div>
+</body>
+</html>

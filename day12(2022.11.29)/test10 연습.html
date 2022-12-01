@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+        
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            outline: 0;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+            display: flex;
+        }
+        header{
+            /* border: solid 5px orange; */
+            width: 20%;
+            height: 100%;
+            padding: 10vh 5vw;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between; /*세로축은 상단 하단 양끝으로 콘텐츠 배치*/
+            justify-content: center; /*가로축은 가운데로 배치*/
+            position: relative;
+            z-index: 3;
+        }
+        h1{
+            font-size: 1px;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav ul li a{
+            color: aliceblue;
+        }
+        main header address{
+            color: lightgray;
+            /* font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px; */
+            font: normal 11px/1.2 "arial"; /*🛃11포인트, 1.2라인하이트*/
+        }
+        main nav{
+            position: absolute;
+            top:10vh;
+            right: 5vw;
+            z-index: 3; /*section요소와 aside팝업요소보다 위에 배치하기 위해 지정*/
+        }
+        main nav ul li a{
+            font-size: 18px;
+            color: #bbb;
+            margin-right: 30px;
+        }
+        main section{
+            /* border: solid 5px green; */
+            width: 80%;
+            height: 100%;
+            padding-top: 15vh;
+            display: flex;
+            position: relative;
+            z-index: 1; /* aside팝업요소 보다 아래에 배치 */
+        }
+        main section article{
+            flex: 1; /*🛃모든 article요소의 너비를 동등하게*/
+            padding: 70px 40px 100px;
+            position: relative;
+            opacity: 0.6;
+            z-index: 1; /* 호버되지 않을 시 1설정*/
+            cursor: pointer;
+            transition: opacity 1s, flex 1s; /*flex, opacity속성에만 전환 효과 적용*/
+        }
+        main section article::before{ /*🔴호버시 왼쪽에서 나타날 가상 패널 요소*/
+            content: "";
+            display: block;
+            width: 80%;
+            height: 95%;
+            background-color: #444;
+            position: absolute;
+            top:0px;
+            left: -200px; /*마우스 호버 전 : article의 왼쪽 바깥 배치*/
+            opacity: 0; /*마우스 호버 전 : 투명하게 숨김 처리*/
+            transition: 1s;
+        }
+        main section article .inner{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;/*세로로 줄 바꿈 되도록*/
+            align-content: space-between; /*.txt와 figure 위, 아래 끝에 배치*/
+            position: relative; /* ::before 요소 위쪽으로 배치되게 하기 위해*/
+        }
+        main section article .inner .txt{
+            width: 100%;
+            transition: 0.5s; /*호버시 전환효과 처리*/
+        }
+        main section article .inner .txt p{
+            font: 14px/1.4 "arial";
+        }
+        main section article .inner .txt h2{
+            font: normal 2vw/1 "Alegreya Sans SC";
+            color: aliceblue;
+            margin-bottom: 40px;
+            padding-top: 70px;
+            transition: 1s;  /*호버시 전환효과 처리*/
+        }
+        main section article .inner .txt h2::after{ /*h2요소 하단 꾸밈 효과*/
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #777;
+            margin-top: 20px;
+            transition: 1.5s;
+        }
+            
+        main section article .inner figure{ /*🔴비디오 영상부분*/
+            border: solid 5px lightcoral; 
+            width: 100%;
+            height: 15vh;
+            background-color: #777;
+            overflow: hidden;
+            box-shadow: 5px 5px 30px rgba(0,0,0,0.3);
+            filter:saturate(10%); /*영상박스의 채도를 낮춤*/
+            transform-origin: left center; /*🔴왼쪽 방향 기준으로 변형 일어나도록 중심축 변경*/
+            transition: 1s;
+        }
+    
+        main section article .inner figure video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*영상이 figure 영역에 차도록*/
+            transform: scale(1.1); /*약간 확대*/
+        }
+    
+        main section article:hover{
+            flex: 1.5; /*🛃호버 된 요소만 1.5배 너비 증가*/
+            opacity: 1;
+            z-index: 2;
+        }
+        main section article:hover::before{ /*article 요소에 호버시 ::before 변경 구문*/
+            left: 0px;
+            opacity: 1;
+        }
+        main section article:hover .inner .txt{
+            width: 75%;
+        }
+        main section article:hover .inner .txt h2{
+            font-size: 5vw;
+            padding-top: 0px;
+        }
+        main section article:hover .inner .txt h2::after{
+            width: 120px;
+            background-color: orange;
+        }
+        main section article:hover .inner figure{
+            height: 25vh;
+            filter: saturate(120%);
+            transform: translateY(3vh);
+        }
+        main aside{
+            border: solid 5px black;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top:0px;
+            left: -100%; /*왼쪽 화면 바깥에 배치*/
+            opacity: 0; /*투명도 0으로 비활성화*/
+            z-index: 2; /*section은 덮고 h1과 nav는 aside 위쪽에 배치*/
+            padding: 20vh 7vw 14vh 20vw;
+            display: flex;
+            justify-content: space-between; /*자식 요소인 .txt와 figure를 좌우 양끝에*/
+            transition: 1s; /*전환 효과 설정*/
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>
+                <span>ACORN</span>
+            </h1>
+
+            <address>
+                2022 ACORN <br> ALL RIGHT RESERVED.
+            </address>
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href="#">아이콘</a> </li>
+                <li> <a href="#">아이콘</a> </li>
+            </ul>
+        </nav>
+
+        <section>
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>01</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <figure>
+                        <video src="../images/Woman - 58142.mp4" muted loop></video>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>02</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <figure>
+                        <video src="../images/Woman - 58142.mp4" muted loop></video>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>03</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <figure>
+                        <video src="../images/Woman - 58142.mp4" muted loop></video>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <div class="inner">
+                    <div class="txt">
+                        <h2>04</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <figure>
+                        <video src="../images/Woman - 58142.mp4" muted loop></video>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <aside>
+            <div class="txt">
+                <h1>01</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <span>CLOSE</span>
+            </div>
+            <figure>
+                <video src="../images/Woman - 58142.mp4" loop muted></video>
+            </figure>
+        </aside>
+    </main>
+</body>
+</html>
