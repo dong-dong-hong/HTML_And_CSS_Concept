@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .dropdown2{
+            background-color: rgba(255, 192, 203, 0.74);
+            width: 200px;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            /* border: 1px solid rgb(245, 97, 97); */
+            height: 150px;
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(211, 211, 211, 0.671);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 35px;
+            display: none;  /* 보이지않게 */
+            /* z-index: 5; 클수록 위로 올라옴*/
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            text-decoration: none;
+            color: rgba(24, 13, 13, 0.651);
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Hoverable Dropdown</h1>
+    <p>Move the mouse over the button to open the dropdown menu</p>
+
+    <div class="dropdown">
+      <button class="dropdown2">드롭다운
+      <div class="dropdown-content">
+        <a href="#">메뉴1</a>
+        <a href="#">메뉴2</a>
+        <a href="#">메뉴3</a>
+      </div>
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #b1e1e2;
+        animation: sky linear 20s infinite;
+      }
+      section {
+        width: 1000px;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        /* border: 1px solid black; */
+      }
+      h1 {
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 150%);
+        font-size: 92px/1 "poiret one";
+        color: aliceblue;
+        text-align: center;
+        animation: day linear 20s infinite;
+      }
+      section .sky {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      section .sky .sun {
+        position: absolute;
+        top: -150px;
+        left: 50%;
+        margin-left: -100px;
+        transform-origin: center 500px;
+        animation: sun linear 20s infinite;
+      }
+      section .sky .cloud1 {
+        position: absolute;
+        top: 20px;
+        left: 0%;
+        animation: flow linear 10s infinite;
+      }
+      section .sky .cloud2 {
+        position: absolute;
+        top: 20px;
+        left: 0%;
+        animation: flow linear 20s infinite;
+      }
+      section .town .day {
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+        animation: day linear 20s infinite;
+      }
+      section .town .night {
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+      }
+      .rotation {
+        position: absolute;
+        top: 210px;
+        left: 520px;
+        animation: rotation linear 15s infinite;
+      }
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes sky {
+        0% {
+          background-color: #b580e4;
+        }
+        25% {
+          background-color: lightblue;
+        }
+        50% {
+          background-color: #f1a8c4;
+        }
+        75% {
+          background-color: #5d649b;
+        }
+        100% {
+          background-color: #6a4d83;
+        }
+      }
+      @keyframes sun {
+        0% {
+          opacity: 0;
+          transform: rotate(-90deg);
+        }
+        25% {
+          opacity: 1;
+          transform: rotate(-30deg);
+        }
+        50% {
+          opacity: 1;
+          transform: rotate(30deg);
+        }
+        75% {
+          opacity: 0;
+          transform: rotate(90deg);
+        }
+        100% {
+          opacity: 0;
+          transform: rotate(-90deg);
+        }
+      }
+
+      @keyframes flow {
+        /* 구름 */
+        0% {
+          left: 0%;
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          left: 90%;
+          opacity: 0;
+        }
+      }
+      @keyframes day {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="day">Have a nice Day!!</h1>
+    <section>
+      <article class="sky">
+        <img src="images/sun.png" width="200px" class="sun" />
+        <img src="images/cloud.png" width="150px" class="cloud1" />
+        <img src="images/cloud2.png" width="100px" class="cloud2" />
+      </article>
+      <article class="town">
+        <img src="images/town_night.png" width="600px" class="night" />
+        <img src="images/town_day.png" width="600px" class="day" />
+        <img src="images/great_wheel2.png" width="110px" class="rotation" />
+      </article>
+    </section>
+  </body>
+</html>

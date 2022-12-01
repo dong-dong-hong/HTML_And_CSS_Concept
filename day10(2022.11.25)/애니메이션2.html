@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            border: 1px solid gray;
+            margin: 60px auto;
+            animation: rotate 1.5s infinite, background 1.5s infinite alternate ;
+        }
+        @keyframes rotate {
+            form{
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            }
+            50%{
+                transform: perspective(120px) rotateX(-18deg) rotateY(0deg);
+            }to{
+                transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+            }
+        }
+        @keyframes background {
+            from{
+                background-color: orange;
+            }50%{
+                background-color: green;
+            }to{
+                background-color: blue;
+            }
+        }
+        /*
+       🚗 @keyframes : 애니메이션이 바뀌는 지점을 지정
+       🚗 animation-delay : 시작 시간을 지정
+        🚗 animation-direction : 애니메이션을 종료한 뒤 진행 방향 지정
+                😝normal 기본값 (from~to로 진행)
+                😝reverse 반대방향으로 진행
+                😝alternate 홀수번째는 normal , 짝수번째는 reverse
+                😝alternate-reverse 홀수reverse, 짝수번째 normal로 진행
+
+      🚗  animation-duration : 실행 시간 지정
+       🚗 animation-iteration-count : 반복 횟수 지정
+            숫자 :  반복횟수 지정
+            infinite : 계속해서 무한 반복
+
+       🚗 animation-name : 이름 / @keyframe 설정해 놓은 중간 상태 지정
+      🚗  animation-timing-function : 커프레임의 전환 형태 지정
+       🚗 animation : 애니메이션 속성 한꺼번에 지정 
+         */
+    </style>
+</head>
+<body>
+    <div class="box"> box1</div>
+</body>
+</html>
