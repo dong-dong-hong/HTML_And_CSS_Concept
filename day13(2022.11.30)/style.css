@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Telugu' , sans-serif;
+}
+.container{
+    width: 1400px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid gray; */
+    background-color: rgb(202, 189, 180);
+    padding: 20px 0 10px;
+}
+
+nav ul{
+    display: flex;
+}
+
+header ul li{
+    margin: 0 15px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+
+header a{
+    text-decoration: none;
+    color: rgb(83, 83,83);
+     font-weight: bold;
+}
+.logo{
+    color: rgb(83, 83,83);
+    font-weight: 800;
+    font-size: large;  
+
+}
+
+.fa-lemon{
+    color: gray;
+}
+
+/* 메인 시작 */
+
+.newCol{
+    height: 300px;
+    width: 1400px;
+    background-image: url(images/740697ffe5a5ee9711062f44dadaa89d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.newCol a{
+    font-size: 10px;
+    color: gray;
+    text-decoration: underline gray;
+}
+
+/* 첫번째 section 부분 */
+.firSection{
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: 150px;
+}
+
+/* 두번째 section 이미지 , 글자 */
+
+.newA{
+    color: gray;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+span{
+    margin-left: 130px;
+    color: gray;
+    letter-spacing: 0.1em;
+    font-size: 20px; 
+}
+
+/* 
+.secSection article{
+    margin: 20px 0px;
+} */
+
+.secSection article ul{
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: space-around;
+    margin-bottom: 200px;
+    list-style: none;
+}
+.secSection article li{
+    margin: 0px 25px;
+}
+
+.secSection article img{
+    filter: opacity(90%);
+    width: 200px;
+    height: 120px;
+}
+
+.secSection article a{
+    text-decoration: none;
+    color: gray;
+}
+
+.secSection article span{
+    margin-left: 50%;
+}
+
+/* 세번째 파트(이미지, 기사) */
+
+.thirdPart{
+    display: flex;
+    justify-content: space-around;
+}
+.thirdPart img{
+    filter: opacity(90%);
+    margin-bottom: 300px;
+}
+.thirdPart p{
+    width: 400px;
+    height: 250px;
+    /* border: 1px solid red; */
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10%;
+    letter-spacing: 1px;
+}
+.thirdPart a{
+    color: lightgray;
+}
+
+/* 마지막 네번째 파트 */
+
+.lastPart{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.lastPic1{
+    background-image: url(images/elephant-114543__340.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 320px;
+    filter: opacity(65%);
+}
+
+.lastPic1 span{
+    position: relative;
+    top: 90%;
+    left: 3%;
+}
+
+.lastPic2 {
+    width: 400px;
+    height: 150px;
+    background-image: url(images/elephant-114543__340.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(85%);
+}
+.lastPic2 span{
+    position: relative;
+    top: 83%;
+    left: 3%;
+}
+.lastPic3{
+    width: 400px;
+    height: 150px;
+    background-image: url(images/elephant-114543__340.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 95%;
+}
+
+.bar{
+    content: "";
+    border-top: 1px solid gray;
+    width: 90%;
+    display: black;
+    margin-top: 130px;
+    margin-left: 5%;
+    justify-content: center;
+}
+
+
+/* footer영역 */
+
+footer{
+    display: flex;
+    margin-top: 80px;
+    margin-left: 5%;
+   
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+}
+
+.navigate, .help , .social{
+    width: 100px;
+    padding-left: 20px;
+     /* border: 1px solid red; */
+}
